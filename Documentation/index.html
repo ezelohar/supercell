@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Template Documentation by Nevide.</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="styles.css" type="text/css" />
+	<link rel="stylesheet" href="shCoreDefault.css" type="text/css" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
+	
+	<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/navbar.js"></script>
+	<script type="text/javascript" src="js/shCore.js"></script>
+	<script type="text/javascript" src="js/shBrushJScript.js"></script>
+	<script type="text/javascript" src="js/shBrushCss.js"></script>
+	<script type="text/javascript" src="js/shBrushPhp.js"></script>
+	<script type="text/javascript" src="js/shBrushXml.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+        <script type="text/javascript">
+            $(function() {
+                $('nav a').bind('click',function(event){
+                    var $anchor = $(this);
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top -50
+                    }, 300,'linear');
+                    event.preventDefault();
+                });
+				
+				var itemLink = $('nav ul li a');
+				itemLink.click(function(e) {
+					e.preventDefault();
+					
+					if(!$(this).hasClass('active')) {
+
+						itemLink.removeClass('active');
+
+						$(this).addClass('active');
+
+						} else {
+					
+						$(this).removeClass('active');
+						
+					}
+				});
+            });
+
+        </script>
+</head>
+
+<body id="start">
+	<div id="wrapper">
+		
+		<header>
+			<div id="logo" class="logo"><img src="img/logo.png"></div>
+			<h1>Responsive Parallax HTML5 Template.</h1>
+		</header>
+		<!-- Header / End -->
+	
+		<div class="nav-container">
+			<nav>
+				<ul>
+				
+					<li><a class="active" href="#start">Start</a></li>
+					
+					<li>
+						<a href="#structures">Structures</a>
+						<ul>
+							<li><a href="#html-structure">HTML Structure</a></li>
+							<li><a href="#css-structure">CSS Structure</a></li>
+						</ul>
+					</li>
+					
+					<li>
+						<a href="#management">Management</a>
+						<ul>
+							<li><a href="#navigation-menu">Navigation</a></li>
+							<li><a href="#slides">Slides</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#titles">Titles</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#contact">Contact</a></li>
+							<li><a href="#parallax">Parallax</a></li>
+							<li><a href="#twitter">Twitter</a></li>
+						</ul>
+					</li>
+
+				
+					<li><a href="#javascript">JavaScript</a></li>
+
+					<li><a href="#sources-credits">Sources & Credits</a></li>
+					
+				</ul>
+				<div class="ribbon-edge-bottomleft"></div>
+				<div class="ribbon-edge-bottomright"></div>
+			</nav>
+		</div>
+		<!-- Navigation / End -->
+		
+		<!-- Home / Start -->
+		<section>
+		
+		<h2 style="margin-top:0;">General Informations</h2>
+		<hr />
+		
+			<div class="column left">
+				<a href="http://themeforest.net/user/Nevide"><img src="img/nevide.png"></a>
+			</div>
+			<!-- Half Column / End -->
+		
+			<div class="column right">
+				<p>
+				<strong>Thank you for your purchase!</strong> If you have any questions that you feel should have been in this document, 
+				please log in using the account used to purchase the file and email via my user page contact form <a href="http://themeforest.net/user/Nevide">here</a>. Thanks so much!
+				</p>
+				<p>
+				For questions on basic HTML, JavaScript or CSS editing - please give your question a quick Google or visit W3Schools 
+				as theme issues get top priority. You will need some knowledge of HTML/CSS to edit this theme.
+				</p>
+			</div>
+			<!-- Half Column / End -->
+			
+		</section>
+		<!-- Home / End -->
+		
+		<!-- HTML Structure / Start 
+		===========================================-->
+		<section id="structures">
+		
+		<h2>Structures</h2>
+		<hr />
+		
+		<p>This template is based on <strong>Skeleton</strong> - a small collection of CSS & JS by <strong>Dave Gamache</strong>
+		files that can help you rapidly develop sites that look beautiful at any size, be it a 17" laptop screen or an iPhone. </p>
+		<p>Skeleton's base grid is a variation of the 16columns 960px grid system. The syntax is simple and it's effective cross browser, but the awesome 
+		part is that it also has the flexibility to go mobile like a champ. You can really easily customize all part of site or build new.</p>
+		
+		<h3 id="html-structure">HTML Structure</h3>
+		
+		<h4>1. Firstly add 960 container</h4>
+			<pre class="brush: html;">
+				<!-- 960 Container -->
+				<div class="container"></div>
+				<!-- End 960 Container --></pre>
+			
+
+		<h4>2. Secondly add a few columns from one to sixteen (that's max columns)</h4>
+			<pre class="brush: html;">
+				<!-- 960 Container -->
+				<div class="container">
+					 <div class="eight columns">1/2 Column - Content Here</div>
+					 <div class="eight columns">1/2 Column - Content Here</div>
+				</div>
+				<!-- End 960 Container --></pre>
+			
+			
+	
+		<h4>3. Sections Management - The entire site is divided into sections that contain relevant content. Sample code for the first section - SERVICES, below:</h4>
+		
+			<pre class="brush: html;">
+			<!-- SERVICES / Start
+			=========================================== -->
+				<section id="services">
+					<div class="container">
+						Section Content...
+					</div>
+				</section>
+			 <!-- SERVICES / End
+			=========================================== --></pre>
+			
+			
+		</section>
+		<!-- HTML Structure / End 
+		===========================================-->
+		
+		<!-- CSS Structure / Start 
+		===========================================-->
+		<section id="css-structure">
+		
+		<h3>CSS Structure</h3>
+		<hr />
+		
+		<p>I used five CSS files in this template and two font-styles. 
+		Those files also contains some general styling, such as anchor tag colors, font-sizes, etc. Keep in mind, that these values might be overridden somewhere else in the files below: </p>
+		
+		<ol>
+			<li>
+				<strong>layout.css</strong> - main css + media query layouts;</li>
+			<li>
+				<strong>base.css</strong> - basic global styles like reset, typography etc;</li>
+			<li>
+				<strong>skeleton.css</strong>&nbsp; - skeleton responsive grid;</li>
+			<li>
+				<strong>swipebox.css</strong>&nbsp; - Responsive Lightbox - style of lightbox contents;</li>			
+			<li>
+				<strong>linecons.css</strong>&nbsp; - Linecons Icon Font styles;</li>
+			<li>
+				<strong>fwslider.css</strong>&nbsp; - Slider settings;</li>			
+			<li>
+				<strong>font-awesome.min.css</strong>&nbsp; - FontAwesome Icon Font styles;</li>
+		</ol>
+
+		<h3>1. The CSS files are separated into sections using:</h3>
+			<pre class="brush: css;">
+				/* 1. Promotion
+				========================================= */</pre>
+			
+			
+		</section>
+		<!-- CSS Structure / End 
+		===========================================-->
+		
+		<!-- Management / Start 
+		===========================================-->
+		<section id="management">
+		
+		<h2>Management</h2>
+		<p>In this section I describe how to edit the page.</p>
+		
+		<h3 id="navigation-menu">1. Navigation Management</h3>
+		<hr />
+		
+		<p>To change the links in the navigation menu, edit the code of navigation menu below:</p>
+		
+			<pre class="brush: html;">
+			<!-- TOP HEADER BAR / Start
+			=========================================== -->
+				<header>
+					<nav>
+						<!-- nav menu -->
+						<ul class="clearfix">
+							<li><a class="current" href="#fwslider">Home</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+
+						<a href="#" class="pull"><i class="icon-reorder"></i></a>
+					</nav>
+				</header>
+			<!-- TOP HEADER BAR / End
+			=========================================== --></pre>
+			
+			
+		<p>For Example:</p>
+		
+			<pre class="brush: html;">
+				<li><a class="current" href="#fwslider">Home</a></li></pre>
+			
+		<p>class="current" determines which nav item is currently active when you open this website. 
+		It should be home section, when you click on another nav item, then item will get this class and change style.</p>
+		
+		</section>
+		<!-- Navigation Management / End 
+		===========================================-->
+
+		
+		<!-- Slides Management / Start 
+		===========================================-->
+		<section id="slides">
+		
+		<h3>2. Slides</h3>
+		<hr />
+		
+		<p>Single slide code example:</p>
+		
+			<pre class="brush: html;">
+			<!-- slide one -->
+			<div class="slide"> 
+				<img src="images/slide-bg-1.jpg">
+				<div class="slide_content">
+					<div class="slide_content_wrap">
+						<div class="logo"><img src="images/logo.png"></div>
+						<h4 class="title">spring stimulates creativity.</h4>
+						<p class="description">Sapientem constituto honestatis. Alia nemore ut pro, his labore delectus ut.</p>
+						<a class="button readmore" href="#">Read More</a>
+					</div>
+				</div>
+			</div></pre>
+			
+			<p>You can change slider contents like logo or texts styles in fwslider.css file.</p>
+			
+		</section>
+		<!-- Slides Management / End 
+		===========================================-->
+
+		<!-- Services Management / Start 
+		===========================================-->
+		<section id="services">
+		
+		<h3>3. Services - font icons usage.</h3>
+		<hr />
+		
+		<p>Every single service is builded by one icon, head caption of service and paragraph. Here is the example code and screenshot how it look.</p>
+		
+			<pre class="brush: html;">
+				<!-- service hex icons -->
+				<div class="one-third column">
+					<figure class="service">
+						<div class="hex">
+							<span aria-hidden="true" class="li_tv"></span>
+						</div>
+						<figcaption>
+							<h3>luctus pulvinar</h3>
+							<p>Maecenas tempus, tellus eget condis mentum rhoncus, 
+							quam opurtunis semper libero, adipiscing sit amet sem.</p>
+						</figcaption>
+					</figure>
+				</div></pre>
+			
+		
+		<p>These icon is just a symbol from free font called: linecons,  <a href="http://dribbble.com/shots/927536-Linecons-48-outline-icons">here</a> 
+		is a whole list of icons that you can use. To change icon edit line below by overwriting "li_tv" to your icon from list.</p>
+		
+			<pre class="brush: html;">
+				<i class="icon-ambulance service-icon"></i></pre>
+				
+		<p>Full list of linecons you can find in Template Folder: "Linecons Font"</p>
+		<p>  As Well you can add font-awesome icons</p>
+		<p><a href="http://fortawesome.github.com/Font-Awesome/">There</a> is documentation of font-awesome font icons.</p>
+		
+		</section>
+		<!-- Services Management / End 
+		===========================================-->	
+
+		<!-- Titles Management / Start 
+		===========================================-->
+		<section id="titles">
+		
+		<h3>4. Titles</h3>
+		<hr />
+		
+		<p>This inscription serves as the transition between sections, you can use it repeatedly. There is example code from screenshot.</p>
+		
+			<pre class="brush: html;">
+			<!-- Title -->
+			<div class="title">
+				<div class="six columns">
+					<h2>Services</h2>
+				</div>
+				
+				<div class="ten columns">
+					<p class="three-lines">We are doing something what 
+					we love to do and we are 
+					doing it absolutely right.</p>
+				</div>
+			</div></pre>
+
+		</section>
+		<!-- Titles Management / End 
+		===========================================-->			
+		
+		<!-- Lightbox Management / Start 
+		===========================================-->
+		<section id="popups">
+		
+		<h3>5. Lightbox Popup External Links Management</h3>
+		<hr />
+		
+		<p>If you want the content of portfolio item to pop up after clicking on an animated window, then you must add the following class to the code of image.</p>
+		
+			<pre class="brush: html;">
+			<a class="portfolio-thumb swipebox" href="images/art/big/1.jpg"><img src="images/art/1.jpg" alt="" /></a></pre>
+
+		<p>Code of this specified class (swipebox) is responsible for displaying contents from the specified address in a popup window. </p>
+		</section>
+		<!-- Lightbox Management / End 
+		===========================================-->
+		
+		<!-- About Section Management / Start 
+		===========================================-->
+		<section id="about">
+		
+		<h3>6. About Section</h3>
+		<hr />
+
+		<p>There is example code for one of photos from about section:</p>
+		
+			<pre class="brush: html;">
+				<div class="one-third column">
+				<figure class="picture">
+					<img src="images/face-one.jpg">
+					<figcaption>
+						<span>Christy - CEO</span>
+						<ul>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+						</ul>
+					</figcaption>
+				</figure>
+			</div></pre>
+					
+		<p class="warning">To look well, use photos 420px width! It's not necessary but look good on mobile ;)</p>
+		
+		<p>3. If you wannt to use social icons for your teamates, use this list.</p>
+			<pre class="brush: html;">
+				<!-- social links -->
+				<ul class="about-socials">
+					<li><a href="#"><i class="icon-facebook"></i></a></li>
+					<li><a href="#"><i class="icon-twitter"></i></a></li>
+					<li><a href="#"><i class="icon-linkedin"></i></a></li>
+				</ul></pre>
+
+		<p>4. To change percentage of skill bar edit <strong>data-percentage</strong>, and caption further.</p>
+			<pre class="brush: html;">
+			<!-- skill bars -->
+				<ul class="skills clearfix">
+					<li><span class="skill-title">Web Design</span><div class="skill-bar"><div class="skill-bar-content" data-percentage="70">70%</div></div></li>
+					<li><span class="skill-title">Print design</span><div class="skill-bar"><div class="skill-bar-content" data-percentage="60">60%</div></div></li>
+					<li><span class="skill-title">HTML/CSS</span><div class="skill-bar"><div class="skill-bar-content" data-percentage="90">90%</div></div></li>
+					<li><span class="skill-title">jQuery</span><div class="skill-bar"><div class="skill-bar-content" data-percentage="80">80%</div></div></li>
+				</ul></pre>
+				
+		</section>
+		<!-- About Section Management / End 
+		===========================================-->		
+
+
+		<!-- Portfolio Management / Start 
+		===========================================-->
+		<section id="portfolio">
+		
+		<h3>7. Portfolio</h3>
+		<hr />
+	
+		<p>This portfolio is filtered by jquery isotope script. It's very simple to use, to add/remove filter edit list here:</p>
+		
+			<pre class="brush: html;">			
+				<!-- Isotope Filter -->
+				<div class="sixteen columns center-filters">
+					<ul id="filters" class="option-set">
+						<li class="selected"><a href="#filter" data-filter="*">show all</a></li>
+						<li>/</li>
+						<li><a href="#filter" data-filter=".identity">identity</a></li>
+						<li>/</li>
+						<li><a href="#filter" data-filter=".photography">photography</a></li>
+						<li>/</li>
+						<li><a href="#filter" data-filter=".architecture">architecture</a></li>
+						<li>/</li>
+						<li><a href="#filter" data-filter=".identity, .architecture">technology</a></li>
+					</ul>
+				</div>
+				<!-- Isotope Filter / End --></pre>
+				
+		<p class="warning">Remember to add class named same as filter you add or edit.</p>
+		
+		<p>Here is simple example of single portfolio item, it's understandable... <strong>img</strong> is an url to image thumbnail.</p>
+		<pre class="brush: html">
+			<!-- 1st Item -->
+			<div class="one-third column item photography">
+				<figure class="portfolio-item">	
+					<a class="portfolio-thumb swipebox" href="images/art/big/1.jpg"><img src="images/art/1.jpg" alt="" /></a>
+					<figcaption class="item-description">
+						<span>Sunrise</span>
+					</figcaption>
+				</figure>
+			</div></pre>
+		
+		</section>
+		<!-- Portfolio Management / End 
+		===========================================-->	
+		
+		
+		<!-- Contact Management / Start 
+		===========================================-->
+		<section id="contact">
+		
+		<h4>8. Contact Management</h4>
+		<hr />
+		
+		<p>In the file contact.php file, specify your e-mail that came messages sent from the contact form.</p>
+		
+			<pre class="brush: php;">
+			$to = 'Your Name &lt;email@domain.com&gt;';</pre>
+			
+		</section>
+		<!-- Contact Management / End 
+		===========================================-->	
+		
+		<!-- PArallax Management / Start 
+		===========================================-->
+		<section id="parallax">
+		
+		<h4>9. Parallax Sections Management</h4>
+		<hr />
+		
+		<p>Parallax Section example:</p>
+		
+			<pre class="brush: html;">
+			<!-- Work With Us
+			=========================================== -->
+				<section class="work">
+
+					<article>
+						<h4>Work With Us!</h4>
+						<p>Noster everti interesset quo et, per mutat ludus facilis ne. Mei at impedit scribentur. 
+						Et etiam menandri quo, populo eloquentiam eu eos.</p>
+						<a href="#contact" class="button green">Contact</a>
+					</article>
+
+				</section></pre>
+				
+			<pre class="brush: css;">
+			<!-- Work With Us
+			=========================================== -->
+			/* 2. Work With Us
+			==================================== */
+			.work {
+				background: url(../images/faces.jpg) 0 0 no-repeat fixed;
+				overflow: hidden;
+				width: 100%;
+				max-width: 1920px;
+				text-align: center;
+			}
+
+			.work article {
+				padding: 170px 0;
+				margin: 0 auto;
+				float: none!important;
+				display: inline-block!important;
+			}
+
+			.work h4 {
+				font-size: 30px;
+				font-weight: 800;
+				text-transform: uppercase;
+				color:#fff;
+			}
+
+			.work p {
+				padding: 5px 0 15px;
+				font-size: 17px;
+				color:#fff;
+				width: 60%;
+				margin: 0 auto;
+			}</pre>			
+			
+			<pre class="brush: js;">
+			<script type="text/javascript">
+			$(document).ready(function(){
+				//.parallax(xPosition, speedFactor, outerHeight) options:
+				//xPosition - Horizontal position of the element
+				//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+				//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+				$('.buy').parallax("50%", 0.4);
+				$('.work').parallax("50%", 0.3);
+				$('.newsletter').parallax("50%", 0.1);
+			})
+			</script></pre>
+				
+		<p>As you can see, there is a section with background you wannt to scroll with parallax effect. At the top of html file under scripts you can add/remove/edit script options for this sections.</p>
+			
+		</section>
+		<!-- PArallax Management / End 
+		===========================================-->	
+		
+	<!-- Twitter Management / Start 
+		===========================================-->
+		<section id="twitter">
+		
+		<h4>10. Twitter Script</h4>
+		<hr />
+		
+		<p>To show your latest tweets in this template you have to make twitter application for developers, it's easy. I try to show you in few Steps.</p>
+		
+		<p>1. Go to <a href="http://dev.twitter.com/">http://dev.twitter.com/</a> and Sing in to your twitter account. Then click "My applications" from dropdown list here: </p>
+		<img src="img/1.jpg">
+		
+		<p>2. Create new aplication</p>
+		<img src="img/2.jpg">
+		
+		
+		<p>Now Fill these fields, accept terms and confirm<p>
+		<img src="img/3.jpg">
+		
+		<p>3. Now you have to create acces token, click button below</p>
+		<img src="img/4.jpg">
+		
+		<p>There is almost everything we need to autorize your twitter account on your website</p>
+		<img src="img/5.jpg">
+		
+		<p>4. Go to @Anywhere Domains, and fill domain where you wannt to install this template and twitter app. Don't close this site.</p>
+		<img src="img/6.jpg">
+		
+		<p>5. In HTML File, put your name in script - Line 632. Change "YourTwitterName" To your twitter nickname.</p>
+		
+		<pre class="brush: js;">
+		<!-- Twitter Feed -->
+		<script type="text/javascript">
+			jQuery(document).ready(function($){
+			$.getJSON('get-tweets.php?url='+encodeURIComponent('statuses/user_timeline.json?screen_name=YourTwitterName&count=3'), function(tweets){
+				$("#twitter-feed").html(tz_format_twitter(tweets));
+			}); });
+		</script></pre>
+		
+		<p>6. Open get-tweets.php file and put your tokens.</p>
+		
+		<pre class="brush: php;">
+		$twitteruser = "";
+		$notweets = 3;
+		$consumerkey = "";
+		$consumersecret = "";
+		$accesstoken = "";
+		$accesstokensecret = "";</pre>
+		
+		<p>twitteruser - put here your twitter account nickname<br>
+		notweets - how many tweets you wannt o display<br>
+		consumerkey, consumersecret, accesstoken, accesstokensecret - paste codes from your application website.</p>
+		<p>That's all, everything should work now.</p>
+		
+		<p class="warning">Remember! PHP Don't work locally, to see changes, you have to put your files to ftp hosting!</p>
+			
+		</section>
+		<!-- Twitter Management / End 
+		===========================================-->	
+		
+		<!-- Java Scripts / Start 
+		===========================================-->
+		<section id="javascript">
+		
+		<h2>Java Scripts</h2>
+		<hr />
+		
+		<p>You can see some help info, when click links which are below each regarding script:</p>
+		
+		<ol>
+			<li>
+				<strong>jQuery</strong> - is a Javascript library that greatly reduces the amount of code that you must write. For more information, please visit http://www.jquery.com/</li>
+			<li>
+				<strong>jQuery Isotope</strong> - Portfolio filtering. Refer to the <a href="http://isotope.metafizzy.co/">author's documentation</a> for additional notes on how to use it.</li>
+			<li>
+				<strong>fwslider</strong> - Slider Gallery, unfortunelly author doesn't write documentation.</li>			
+			<li>
+				<strong>jQuery Sticky</strong> - Sticky Plugin v1.0.0 for jQuery by Anthony Garand. <a href="http://labs.anthonygarand.com/sticky">http://labs.anthonygarand.com/sticky</a></li>
+			<li>				
+				<strong>Swipebox</strong> - jQuery Lightbox Gallery. <a href="http://brutaldesign.github.io/swipebox/">http://brutaldesign.github.io/swipebox/</a></li>			
+			<li>				
+				<strong>jQuery Parallax</strong> - jQuery Parallax Plugin by Ian Lunn. <a href="http://www.ianlunn.co.uk/plugins/jquery-parallax/">http://www.ianlunn.co.uk/plugins/jquery-parallax/</a></li>
+			<li>				
+				<strong>Retina.js</strong> - Retina Ready images auto switch <a href="http://retinajs.com/">http://retinajs.com/</a></li>
+			<li>
+				<strong>jQuery Scroll To</strong> - Scrolling Window. Refer to the <a href="http://flesler.blogspot.com/">author's documentation</a> for additional notes on how to use it.</li>
+			<li>
+				<strong>jQuery One Page Nav</strong> - Navigation Menu<a href="https://github.com/davist11/jQuery-One-Page-Nav">author's documentation</a> for additional notes on how to use it.</li>
+		</ol>
+			
+		</section>
+		<!-- Java Scripts / End 
+		===========================================-->
+		
+		<!-- Sources and Credits / Start 
+		===========================================-->
+		<section id="sources-credits">
+		
+		<h2>Sources & Credits</h2>
+		<hr />
+		
+			<p class="warning">I have permission from the plug-in "fwslider"  author to use it in the template.</p>
+			<p class="warning">Images included in preview are for demonstration purposes and should always be replaced with your own work.</p>
+			<p class="warning">Photos are bought from PhotoDune and if you want to buy one just contact me and I'll provide you a link.</p>
+			<p class="warning">The fonts are coming from google webfonts library and myfonts.com, every font is <strong>legally licensed.</strong></p>
+		
+			<p><strong>Once again, thank you so much for purchasing this theme.</strong> As I said at the beginning, 
+			I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist.
+			If you have a more general question relating to the themes on ThemeForest, basic HTML/CSS/JavaScript related questions, 
+			you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+
+			
+		</section>
+		<!-- Sources and Credits / End 
+		===========================================-->
+		
+		<!-- Footer / Start -->
+		<footer>
+			<p>Copyright &copy; Nevide 2013</p>
+		</footer>
+		<!-- Footer / End -->
+		
+	</div>
+
+<!-- scripts -->
+
+
+ </body>
+</html>
